@@ -29,7 +29,10 @@ test.describe("SEO and social metadata", () => {
       name: "Aravind Russell V",
       jobTitle: "Test Automation Architect",
       email: "mailto:aravind.russell@outlook.com",
-      sameAs: ["https://github.com/aravindrussell"],
+      sameAs: [
+        "https://www.linkedin.com/in/aravind-russell-venugopal/",
+        "https://github.com/aravindrussell",
+      ],
     });
   });
 

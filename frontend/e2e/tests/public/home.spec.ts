@@ -29,6 +29,10 @@ test.describe("Home page — first impression", () => {
       "href",
       "mailto:aravind.russell@outlook.com",
     );
+    await expect(home.section("contact").getByRole("link", { name: /linkedin/i })).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/aravind-russell-venugopal/",
+    );
   });
 
   test("shows key stats from the content file", async ({ home }) => {
