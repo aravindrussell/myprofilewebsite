@@ -1,4 +1,4 @@
-import type { Theme } from "../types/profile";
+import type { Theme } from "../types/profile.ts";
 
 type FontPair = Theme["fontPair"];
 

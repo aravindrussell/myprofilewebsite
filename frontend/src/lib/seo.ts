@@ -1,6 +1,6 @@
-import type { PortfolioContent } from "../types/profile";
-import { FONT_PAIRS } from "./fonts";
-import { onColor } from "./color";
+import type { PortfolioContent } from "../types/profile.ts";
+import { FONT_PAIRS } from "./fonts.ts";
+import { onColor } from "./color.ts";
 
 function esc(value: string): string {
   return value

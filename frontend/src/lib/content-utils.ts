@@ -1,5 +1,5 @@
 /** Pure helpers shared by the site, the admin preview and build tooling (no import.meta.env). */
-import type { PortfolioContent, SectionMeta } from "../types/profile";
+import type { PortfolioContent, SectionMeta } from "../types/profile.ts";
 
 export function initials(name: string): string {
   return name

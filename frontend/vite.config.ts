@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
-import { contentPlugin } from "./plugins/content";
+import { contentPlugin } from "./plugins/content.ts";
 
 const repoRoot = fileURLToPath(new URL("..", import.meta.url));
 const contentDir = process.env.CONTENT_DIR ?? fileURLToPath(new URL("../content", import.meta.url));

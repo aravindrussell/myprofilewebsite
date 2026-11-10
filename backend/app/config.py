@@ -9,7 +9,6 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
 
-
 class NotDevEnvironmentError(RuntimeError):
     """Raised when the API is started outside the dev environment."""
 

@@ -6,10 +6,10 @@
 import { readFileSync, readdirSync, existsSync, statSync } from "node:fs";
 import { join, resolve, sep, extname } from "node:path";
 import type { Plugin } from "vite";
-import type { PortfolioContent } from "../src/types/profile";
-import { FONT_IMPORTS } from "../src/lib/fonts";
-import { buildHead, faviconSvg, robotsTxt, sitemapXml, themeBootScript } from "../src/lib/seo";
-import { initials } from "../src/lib/content-utils";
+import type { PortfolioContent } from "../src/types/profile.ts";
+import { FONT_IMPORTS } from "../src/lib/fonts.ts";
+import { buildHead, faviconSvg, robotsTxt, sitemapXml, themeBootScript } from "../src/lib/seo.ts";
+import { initials } from "../src/lib/content-utils.ts";
 
 const VIRTUAL_FONTS = "virtual:fonts";
 const RESOLVED_FONTS = "\0virtual:fonts";
@@ -86,7 +86,12 @@ export function contentPlugin(opts: { contentDir: string; siteUrl: () => string 
       const dist = resolve(server.config.root, server.config.build.outDir);
       server.middlewares.use((req, res, next) => {
         const url = (req.url ?? "").split("?")[0] ?? "";
-        if (url === "/" || url === "/index.html" || extname(url) || !existsSync(join(dist, "404.html"))) {
+        if (
+          url === "/" ||
+          url === "/index.html" ||
+          extname(url) ||
+          !existsSync(join(dist, "404.html"))
+        ) {
           next();
           return;
         }

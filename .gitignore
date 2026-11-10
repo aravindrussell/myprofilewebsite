@@ -35,3 +35,4 @@ Thumbs.db
 
 # e2e scratch content
 frontend/e2e/.tmp/
+frontend/.lighthouseci/
