@@ -32,3 +32,6 @@ Thumbs.db
 .vscode/
 .idea/
 *.egg-info/
+
+# e2e scratch content
+frontend/e2e/.tmp/

@@ -34,7 +34,8 @@ export default tseslint.config(
     rules: { "@typescript-eslint/no-non-null-assertion": "off" },
   },
   {
+    // Playwright fixtures use `use()` (not a React hook) and `({}, use)` for no dependencies.
     files: ["e2e/**/*.ts"],
-    rules: { "react-hooks/rules-of-hooks": "off" },
+    rules: { "react-hooks/rules-of-hooks": "off", "no-empty-pattern": "off" },
   },
 );
