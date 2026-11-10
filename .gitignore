@@ -31,3 +31,4 @@ content/backups/
 Thumbs.db
 .vscode/
 .idea/
+*.egg-info/
