@@ -56,4 +56,7 @@ def test_invalid_content_is_rejected(seed: dict[str, Any], mutate: Any, message:
 def test_referenced_assets_lists_only_set_paths(seed: dict[str, Any]) -> None:
     seed["profile"]["photo"] = "assets/me.webp"
     seed["profile"]["photoAlt"] = "Portrait"
-    assert PortfolioContent.model_validate(seed).referenced_assets() == {"assets/me.webp"}
+    assert PortfolioContent.model_validate(seed).referenced_assets() == {
+        "assets/me.webp",
+        "assets/og-default.png",
+    }
