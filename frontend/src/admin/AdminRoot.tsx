@@ -1,4 +1,7 @@
-/** Placeholder; the admin UI is built in milestone 4. */
+/** Dev-only entry for /admin and /__preview (never part of the production bundle). */
+import { AdminApp } from "./AdminApp";
+import { PreviewPage } from "./PreviewPage";
+
 export default function AdminRoot({ path }: { path: string }) {
-  return <main className="p-8 font-mono">Admin ({path}) coming in milestone 4.</main>;
+  return path.startsWith("/__preview") ? <PreviewPage /> : <AdminApp />;
 }

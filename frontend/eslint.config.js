@@ -29,6 +29,11 @@ export default tseslint.config(
     },
   },
   {
+    // Editors index into arrays with the index from the surrounding .map(), so it always exists.
+    files: ["src/admin/editors/**/*.tsx"],
+    rules: { "@typescript-eslint/no-non-null-assertion": "off" },
+  },
+  {
     files: ["e2e/**/*.ts"],
     rules: { "react-hooks/rules-of-hooks": "off" },
   },
