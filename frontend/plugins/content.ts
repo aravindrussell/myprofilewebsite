@@ -81,6 +81,20 @@ export function contentPlugin(opts: { contentDir: string; siteUrl: () => string 
         res.end(readFileSync(file));
       });
     },
+    // `vite preview` behaves like Vercel: unknown routes get 404.html with a 404 status.
+    configurePreviewServer(server) {
+      const dist = resolve(server.config.root, server.config.build.outDir);
+      server.middlewares.use((req, res, next) => {
+        const url = (req.url ?? "").split("?")[0] ?? "";
+        if (url === "/" || url === "/index.html" || extname(url) || !existsSync(join(dist, "404.html"))) {
+          next();
+          return;
+        }
+        res.statusCode = 404;
+        res.setHeader("Content-Type", "text/html; charset=utf-8");
+        res.end(readFileSync(join(dist, "404.html")));
+      });
+    },
     generateBundle() {
       if (isSsr) return;
       const c = read();

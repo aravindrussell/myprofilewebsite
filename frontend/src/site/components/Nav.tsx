@@ -4,7 +4,15 @@ import { Icon } from "./Icon";
 import { ThemeToggle } from "./ThemeToggle";
 
 /** Sticky header with active-section highlighting (IntersectionObserver) and a mobile menu. */
-export function Nav({ sections, monogram }: { sections: SectionMeta[]; monogram: string }) {
+export function Nav({
+  sections,
+  monogram,
+  name,
+}: {
+  sections: SectionMeta[];
+  monogram: string;
+  name: string;
+}) {
   const links = sections.filter((s) => s.id !== "hero");
   const [active, setActive] = useState<string>("hero");
   const [open, setOpen] = useState(false);
@@ -46,13 +54,12 @@ export function Nav({ sections, monogram }: { sections: SectionMeta[]; monogram:
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur-md">
       <nav aria-label="Primary" className="container-page flex h-16 items-center justify-between">
-        <a
-          href="#hero"
-          className="font-mono text-base font-bold tracking-tight"
-          aria-label="Back to top"
-        >
+        <a href="#hero" className="font-mono text-base font-bold tracking-tight">
           {monogram}
-          <span className="cursor-blink text-accent">_</span>
+          <span className="cursor-blink text-accent" aria-hidden>
+            _
+          </span>
+          <span className="sr-only"> {name}, back to top</span>
         </a>
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((s) => (

@@ -8,7 +8,6 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
-DEV_WEB_PORT = 5173
 
 
 class NotDevEnvironmentError(RuntimeError):
@@ -45,8 +44,9 @@ def load_settings() -> Settings:
             "The admin API only runs in the dev environment. Set ENV=dev to start it."
         )
     api_port = int(os.environ.get("API_PORT", "8787"))
+    web_port = int(os.environ.get("WEB_PORT", "5173"))
     content_dir = Path(os.environ.get("CONTENT_DIR") or REPO_ROOT / "content").resolve()
-    ports = (DEV_WEB_PORT, api_port)
+    ports = (web_port, api_port)
     names = ("localhost", "127.0.0.1")
     return Settings(
         content_dir=content_dir,

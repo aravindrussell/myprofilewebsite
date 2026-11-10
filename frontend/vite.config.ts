@@ -10,6 +10,8 @@ const contentDir = process.env.CONTENT_DIR ?? fileURLToPath(new URL("../content"
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, repoRoot, "VITE_");
+  const webPort = Number(process.env.WEB_PORT ?? 5173);
+  const apiPort = Number(process.env.API_PORT ?? 8787);
   const siteUrl = () => {
     const fromContent = (
       JSON.parse(readFileSync(`${contentDir}/profile.json`, "utf8")) as { seo: { siteUrl: string } }
@@ -22,10 +24,10 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), tailwindcss(), contentPlugin({ contentDir, siteUrl })],
     server: {
       host: "localhost",
-      port: 5173,
+      port: webPort,
       strictPort: true,
       fs: { allow: [repoRoot] },
-      proxy: { "/api": { target: "http://127.0.0.1:8787", changeOrigin: false } },
+      proxy: { "/api": { target: `http://127.0.0.1:${apiPort}`, changeOrigin: false } },
     },
     preview: { host: "localhost", port: 4173, strictPort: true },
     build: { target: "es2022", cssCodeSplit: true },

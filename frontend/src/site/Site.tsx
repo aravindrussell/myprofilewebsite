@@ -46,7 +46,11 @@ export function Site({ content, formspreeId }: { content: PortfolioContent; form
         >
           Skip to content
         </a>
-        <Nav sections={sections} monogram={initials(content.profile.name)} />
+        <Nav
+          sections={sections}
+          monogram={initials(content.profile.name)}
+          name={content.profile.name}
+        />
         <main id="main">
           {sections.map((meta, i) => {
             if (meta.id === "hero")

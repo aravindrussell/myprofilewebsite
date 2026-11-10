@@ -109,6 +109,7 @@ function SortableItem<T>({
           type="button"
           className="min-w-0 flex-1 truncate rounded px-2 py-1 text-left text-sm font-medium hover:bg-surface-2"
           aria-expanded={renderItem ? open : undefined}
+          data-testid="item-label"
           onClick={() => {
             setOpen((o) => !o);
           }}

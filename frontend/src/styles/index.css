@@ -103,6 +103,14 @@
     animation: blink 1.1s steps(1) infinite;
   }
 }
+/* Reduced motion: show reveal-on-scroll content immediately (also covers the prerendered HTML). */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 @keyframes blink {
   50% {
     opacity: 0;
