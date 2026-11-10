@@ -1,0 +1,33 @@
+# deps / envs
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# build output
+frontend/dist/
+frontend/dist-ssr/
+frontend/test-results/
+frontend/playwright-report/
+frontend/blob-report/
+.lighthouseci/
+
+# local content state
+content/backups/
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# source documents (contain personal data; the site uses content/profile.json)
+*.docx
+
+# os / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: portfolio-admin-api
+Version: 0.1.0
+Summary: Local-only content API for the portfolio admin page (dev environment only).
+Requires-Python: >=3.12
+Requires-Dist: fastapi>=0.115
+Requires-Dist: uvicorn>=0.32
+Requires-Dist: pydantic>=2.10
+Requires-Dist: python-multipart>=0.0.18
+Requires-Dist: pillow>=11.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3; extra == "dev"
+Requires-Dist: httpx>=0.28; extra == "dev"
+Requires-Dist: ruff>=0.8; extra == "dev"
+Requires-Dist: mypy>=1.13; extra == "dev"

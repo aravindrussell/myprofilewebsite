@@ -1,0 +1,10 @@
+pyproject.toml
+app/__init__.py
+app/config.py
+app/main.py
+app/serve.py
+portfolio_admin_api.egg-info/PKG-INFO
+portfolio_admin_api.egg-info/SOURCES.txt
+portfolio_admin_api.egg-info/dependency_links.txt
+portfolio_admin_api.egg-info/requires.txt
+portfolio_admin_api.egg-info/top_level.txt
