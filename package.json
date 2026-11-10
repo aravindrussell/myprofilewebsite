@@ -14,8 +14,8 @@
     "test": "npm run test:api && npm run test:e2e",
     "test:api": "node scripts/py.mjs -m pytest",
     "test:e2e": "npm --prefix frontend run test:e2e",
-    "lint": "node scripts/py.mjs -m ruff check . && node scripts/py.mjs -m ruff format --check . && npm --prefix frontend run lint",
-    "format": "node scripts/py.mjs -m ruff format . && node scripts/py.mjs -m ruff check --fix . && npm --prefix frontend run format",
+    "lint": "node scripts/py.mjs -m ruff check . ../scripts && node scripts/py.mjs -m ruff format --check . ../scripts && npm --prefix frontend run lint",
+    "format": "node scripts/py.mjs -m ruff format . ../scripts && node scripts/py.mjs -m ruff check --fix . ../scripts && npm --prefix frontend run format",
     "typecheck": "node scripts/py.mjs -m mypy && npm --prefix frontend run typecheck",
     "lighthouse": "npm --prefix frontend run lighthouse",
     "check": "npm run lint && npm run typecheck && npm run check:types && npm run test:api && npm run build"

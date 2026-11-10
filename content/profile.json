@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "profile": {
+    "name": "Aravind Russell V",
+    "title": "Test Automation Architect",
+    "headline": "I architect test automation frameworks and quality gates for enterprise platforms.",
+    "about": "Test Automation Architect with 12 years of experience in Software Quality Engineering across Client/Server and Web applications, including lead and architect responsibilities for test strategy, frameworks and quality gates on enterprise platforms; proficient in Java, Python, TypeScript & JavaScript.",
+    "highlights": [
+      "Architected scalable, reusable and modular automation frameworks from scratch using Playwright, Selenium WebDriver, Cucumber (BDD), TestNG, JUnit and PyTest, applying Page Object Model and Data-Driven, Keyword-Driven and Hybrid design patterns.",
+      "Implemented the Playwright framework from scratch and integrated MCP (Model Context Protocol); built a RAG pipeline for requirement analysis. Post Graduate Diploma in Artificial Intelligence (IIIT Delhi).",
+      "Embedded automated suites into CI/CD pipelines (Jenkins) with Maven and Git/GitHub/GitLab/Bitbucket for continuous testing and nightly execution.",
+      "Hands-on API automation using Java (Rest Assured) and Python for RESTful services, with SQL (MSSQL) back-end validation; experienced in Agile, Scrum and Waterfall SDLC.",
+      "Established quality gates and testing standards across development teams; reviewed test code using Code Collaborator; expert in test planning, estimation, Requirement Traceability Matrix (RTM) and Smoke, Functional, Regression, Integration, UAT and Cross-Browser testing."
+    ],
+    "location": "Mumbai, India",
+    "availability": "Open to remote / Chennai / Coimbatore",
+    "email": "aravind.russell@outlook.com",
+    "phone": "+91 9677873329",
+    "showPhone": false,
+    "photo": "",
+    "photoAlt": "",
+    "socials": {
+      "linkedin": "",
+      "github": "https://github.com/aravindrussell",
+      "naukri": ""
+    },
+    "resume": {
+      "mode": "url",
+      "url": "https://1drv.ms/b/c/a62ec88890a7e552/IQBIzHWewBKuSqZQlnPtAlzMAbFc-LvvtDXknkulAGu-5Rc?e=HHp2e4",
+      "file": ""
+    },
+    "stats": [
+      { "id": "years", "value": "12+", "label": "years in quality engineering" },
+      { "id": "orgs", "value": "5", "label": "organisations" },
+      { "id": "ai", "value": "Playwright + MCP", "label": "AI-assisted testing" }
+    ]
+  },
+  "sections": [
+    { "id": "hero", "navLabel": "Home", "title": "Home", "visible": true },
+    { "id": "about", "navLabel": "About", "title": "About", "visible": true },
+    { "id": "skills", "navLabel": "Skills", "title": "Skills", "visible": true },
+    { "id": "experience", "navLabel": "Experience", "title": "Experience", "visible": true },
+    { "id": "projects", "navLabel": "Projects", "title": "Projects", "visible": true },
+    { "id": "education", "navLabel": "Education", "title": "Education", "visible": true },
+    {
+      "id": "certifications",
+      "navLabel": "Certifications",
+      "title": "Certifications & Appreciation",
+      "visible": true
+    },
+    { "id": "testimonials", "navLabel": "Testimonials", "title": "Recommendations", "visible": false },
+    { "id": "contact", "navLabel": "Contact", "title": "Contact", "visible": true }
+  ],
+  "skills": [
+    {
+      "id": "automation-tools",
+      "name": "Automation Tools",
+      "skills": [
+        { "name": "Playwright", "level": null },
+        { "name": "Selenium WebDriver", "level": null },
+        { "name": "Cucumber", "level": null },
+        { "name": "Rest Assured", "level": null }
+      ]
+    },
+    {
+      "id": "languages",
+      "name": "Languages",
+      "skills": [
+        { "name": "Java", "level": null },
+        { "name": "Python", "level": null },
+        { "name": "TypeScript", "level": null },
+        { "name": "JavaScript", "level": null }
+      ]
+    },
+    {
+      "id": "test-frameworks",
+      "name": "Test Frameworks",
+      "skills": [
+        { "name": "BDD (Cucumber, Behave)", "level": null },
+        { "name": "TestNG", "level": null },
+        { "name": "JUnit", "level": null },
+        { "name": "PyTest", "level": null }
+      ]
+    },
+    {
+      "id": "framework-design",
+      "name": "Framework Design",
+      "skills": [
+        { "name": "Page Object Model", "level": null },
+        { "name": "Data-Driven", "level": null },
+        { "name": "Keyword-Driven", "level": null },
+        { "name": "Hybrid", "level": null },
+        { "name": "BDD", "level": null }
+      ]
+    },
+    {
+      "id": "api-testing",
+      "name": "API Testing",
+      "skills": [
+        { "name": "Rest Assured", "level": null },
+        { "name": "RESTful web services (Java & Python)", "level": null },
+        { "name": "Playwright API Testing", "level": null }
+      ]
+    },
+    {
+      "id": "ai-in-testing",
+      "name": "AI in Testing",
+      "skills": [
+        { "name": "Playwright MCP integration", "level": null },
+        { "name": "RAG pipeline for requirement analysis", "level": null }
+      ]
+    },
+    {
+      "id": "ci-cd",
+      "name": "CI/CD & Build",
+      "skills": [
+        { "name": "Jenkins", "level": null },
+        { "name": "Maven", "level": null }
+      ]
+    },
+    {
+      "id": "version-control",
+      "name": "Version Control",
+      "skills": [
+        { "name": "Git", "level": null },
+        { "name": "GitHub", "level": null },
+        { "name": "GitLab", "level": null },
+        { "name": "Bitbucket", "level": null }
+      ]
+    },
+    {
+      "id": "database",
+      "name": "Database",
+      "skills": [
+        { "name": "SQL", "level": null },
+        { "name": "MSSQL", "level": null }
+      ]
+    },
+    {
+      "id": "ide-os",
+      "name": "IDE & OS",
+      "skills": [
+        { "name": "Eclipse", "level": null },
+        { "name": "IntelliJ IDEA", "level": null },
+        { "name": "PyCharm", "level": null },
+        { "name": "VS Code", "level": null },
+        { "name": "Windows 10/11", "level": null },
+        { "name": "CentOS (Linux)", "level": null }
+      ]
+    },
+    {
+      "id": "test-management",
+      "name": "Test Management",
+      "skills": [
+        { "name": "Jira", "level": null },
+        { "name": "HP ALM", "level": null },
+        { "name": "Quality Center", "level": null }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "nomura",
+      "company": "Nomura",
+      "role": "Lead Quality Engineer",
+      "start": "2024-09",
+      "end": "",
+      "location": "",
+      "client": "",
+      "project": "Compliance IT",
+      "bullets": [
+        "Architected end-to-end test automation frameworks and test strategies for enterprise-level Compliance applications.",
+        "Implemented a Playwright automation framework from scratch and rolled it out across several applications.",
+        "Developed a Data Compare tool that validates data across Excel, CSV and database sources and generates a detailed comparison report, automating data verification and reducing manual effort.",
+        "Designed scalable, modular automation architectures aligned with CI/CD pipelines to enable continuous testing.",
+        "Established quality gates and testing standards across multiple development teams.",
+        "Led test environment planning, setup and management for complex systems.",
+        "Hands-on with Selenium WebDriver, JUnit, Cucumber, Rest Assured and database testing; developed hybrid frameworks combining data-driven, keyword-driven and BDD approaches.",
+        "Implemented API testing solutions for RESTful web services with SQL back-end validation."
+      ],
+      "tags": [
+        "Playwright",
+        "Selenium WebDriver",
+        "Java",
+        "Python",
+        "Cucumber (BDD)",
+        "Rest Assured",
+        "Jenkins",
+        "Maven",
+        "GitHub",
+        "SQL",
+        "API Testing",
+        "Eclipse",
+        "Windows",
+        "Linux"
+      ],
+      "visible": true
+    },
+    {
+      "id": "intelliswift",
+      "company": "Intelliswift Software Private Ltd.",
+      "role": "Senior Test Automation Engineer",
+      "start": "2023-07",
+      "end": "2024-09",
+      "location": "",
+      "client": "Robert Bosch",
+      "project": "IE-ST Application (Ecommerce website for Bosch products)",
+      "bullets": [
+        "Created a Test Automation framework in Selenium WebDriver using a hybrid-driven approach with Spring components and TestNG.",
+        "Developed Java scripts for regression coverage and cross-browser validation; built the project with Spring Framework.",
+        "Integrated with Jenkins to run tests automatically on a nightly basis.",
+        "Performed Smoke, Functional, Regression and Integration testing; used Bitbucket and Code Collaborator for code and reviews."
+      ],
+      "tags": [
+        "Java",
+        "Selenium WebDriver",
+        "TestNG",
+        "Spring",
+        "Eclipse",
+        "IntelliJ",
+        "Jenkins",
+        "Windows",
+        "Bitbucket",
+        "SQL",
+        "API Testing"
+      ],
+      "visible": true
+    },
+    {
+      "id": "ltimindtree",
+      "company": "LTIMindtree",
+      "role": "Senior Test Engineer",
+      "start": "2020-06",
+      "end": "2023-07",
+      "location": "",
+      "client": "Nomura",
+      "project": "Compliance QA",
+      "bullets": [
+        "Created a Test Automation framework in Selenium WebDriver using a behavior-driven approach with Cucumber.",
+        "Developed Java and Python scripts for regression coverage and cross-browser validation.",
+        "Used Maven for builds and integrated with Jenkins for automatic nightly test runs.",
+        "Performed Smoke, Functional, Regression and Integration testing; used Git and Code Collaborator for code and reviews."
+      ],
+      "tags": [
+        "Java",
+        "Cucumber",
+        "Python",
+        "Selenium WebDriver",
+        "Eclipse",
+        "IntelliJ",
+        "Jenkins",
+        "BDD Framework",
+        "Windows",
+        "Linux",
+        "GitHub",
+        "Maven",
+        "SQL",
+        "API Testing"
+      ],
+      "visible": true
+    },
+    {
+      "id": "hcl",
+      "company": "HCL Technologies",
+      "role": "Lead Engineer",
+      "start": "2018-10",
+      "end": "2020-05",
+      "location": "",
+      "client": "Cisco / Synamedia",
+      "project": "OMD (Open Media Distribution)",
+      "bullets": [
+        "Drafted the Test Plan covering objectives, phases, scenarios and test environment after thorough analysis of business rules.",
+        "Created an automation framework in Selenium WebDriver using a hybrid-driven approach with PyTest; wrote and updated Python scripts for new and upgraded functionality.",
+        "Integrated tests with Jenkins to run automatically on a nightly basis."
+      ],
+      "tags": [
+        "Python",
+        "Selenium WebDriver",
+        "PyCharm",
+        "Jenkins",
+        "Behave",
+        "Data-Driven Framework",
+        "BDD",
+        "XPath",
+        "Windows",
+        "CentOS",
+        "GitHub",
+        "Maven",
+        "API Automation"
+      ],
+      "visible": true
+    },
+    {
+      "id": "cognizant",
+      "company": "Cognizant Technology Solutions",
+      "role": "Test Professional",
+      "start": "2014-11",
+      "end": "2018-10",
+      "location": "",
+      "client": "LexisNexis",
+      "project": "Lexis Advance",
+      "bullets": [
+        "Developed test plans, test strategies, test scenarios and test scripts based on business and system use cases.",
+        "Built data-driven Selenium WebDriver tests and followed BDD with SpecFlow; wrote maintainable Java/C# Page Objects.",
+        "Used Git and Code Collaborator for code repository and reviews."
+      ],
+      "tags": [
+        "Java",
+        "C#",
+        "Selenium WebDriver",
+        "Eclipse",
+        "Jenkins",
+        "Cucumber",
+        "SpecFlow",
+        "Page Object Model (POM)",
+        "Data-Driven Framework",
+        "Quality Center",
+        "XPath",
+        "Windows"
+      ],
+      "visible": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "requirement-analysis-agent",
+      "title": "Requirement Analysis Agent",
+      "description": "A Streamlit application that indexes requirement documents and answers questions using either an OpenAI model or an Anthropic Claude model through LangChain.",
+      "tags": ["Python", "LangChain", "OpenAI API", "Claude API", "Streamlit"],
+      "links": [
+        { "label": "GitHub", "url": "https://github.com/aravindrussell/requirement_analysis_agent" }
+      ],
+      "image": "",
+      "imageAlt": "",
+      "visible": true
+    },
+    {
+      "id": "data-compare-tool",
+      "title": "Data Compare Tool",
+      "description": "",
+      "tags": [],
+      "links": [],
+      "image": "",
+      "imageAlt": "",
+      "visible": false
+    }
+  ],
+  "education": [
+    {
+      "id": "pgd-ai",
+      "qualification": "Post Graduate Diploma in Artificial Intelligence",
+      "institution": "IIIT Delhi",
+      "start": "",
+      "end": "",
+      "visible": true
+    },
+    {
+      "id": "bca",
+      "qualification": "Bachelor of Computer Applications",
+      "institution": "Kongu Nadu Arts and Science College",
+      "start": "",
+      "end": "",
+      "visible": true
+    }
+  ],
+  "certifications": [
+    {
+      "id": "automation-concepts",
+      "name": "Automation Concepts for Learners",
+      "issuer": "Cognizant Technology Solutions",
+      "date": "",
+      "url": "",
+      "visible": true
+    },
+    {
+      "id": "level-0-testing",
+      "name": "Level 0 Software Testing",
+      "issuer": "Cognizant Technology Solutions",
+      "date": "",
+      "url": "",
+      "visible": true
+    }
+  ],
+  "testimonials": [],
+  "contact": {
+    "message": "Open to Test Automation Architect and Lead Quality Engineer roles — remote, Chennai or Coimbatore."
+  },
+  "theme": {
+    "accent": "#2563EB",
+    "accentDark": "#5B9BFF",
+    "defaultMode": "system",
+    "fontPair": "inter-jetbrains"
+  },
+  "seo": {
+    "title": "Aravind Russell V — Test Automation Architect",
+    "description": "Test Automation Architect with 12 years building Playwright, Selenium and API automation frameworks, CI/CD quality gates and AI-assisted testing.",
+    "keywords": [
+      "Test Automation Architect",
+      "Lead Quality Engineer",
+      "Playwright",
+      "Selenium WebDriver",
+      "Cucumber",
+      "Rest Assured",
+      "PyTest",
+      "TestNG",
+      "API Testing",
+      "CI/CD",
+      "Jenkins",
+      "MCP",
+      "RAG"
+    ],
+    "ogImage": "",
+    "siteUrl": "https://aravindrusselportfolio.vercel.app"
+  }
+}

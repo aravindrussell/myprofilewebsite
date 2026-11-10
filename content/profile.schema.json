@@ -1,0 +1,860 @@
+{
+  "$defs": {
+    "Certification": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "issuer": {
+          "default": "",
+          "maxLength": 120,
+          "title": "Issuer",
+          "type": "string"
+        },
+        "date": {
+          "default": "",
+          "pattern": "^(\\d{4}-(0[1-9]|1[0-2]))?$",
+          "title": "Date",
+          "type": "string"
+        },
+        "url": {
+          "default": "",
+          "maxLength": 500,
+          "pattern": "^(https?://\\S+)?$",
+          "title": "Url",
+          "type": "string"
+        },
+        "visible": {
+          "default": true,
+          "title": "Visible",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "issuer",
+        "date",
+        "url",
+        "visible"
+      ],
+      "title": "Certification",
+      "type": "object"
+    },
+    "Contact": {
+      "additionalProperties": false,
+      "properties": {
+        "message": {
+          "default": "",
+          "maxLength": 300,
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message"
+      ],
+      "title": "Contact",
+      "type": "object"
+    },
+    "Education": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "qualification": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Qualification",
+          "type": "string"
+        },
+        "institution": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Institution",
+          "type": "string"
+        },
+        "start": {
+          "default": "",
+          "pattern": "^(\\d{4})?$",
+          "title": "Start",
+          "type": "string"
+        },
+        "end": {
+          "default": "",
+          "pattern": "^(\\d{4})?$",
+          "title": "End",
+          "type": "string"
+        },
+        "visible": {
+          "default": true,
+          "title": "Visible",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "qualification",
+        "institution",
+        "start",
+        "end",
+        "visible"
+      ],
+      "title": "Education",
+      "type": "object"
+    },
+    "Experience": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "company": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Company",
+          "type": "string"
+        },
+        "role": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Role",
+          "type": "string"
+        },
+        "start": {
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])$",
+          "title": "Start",
+          "type": "string"
+        },
+        "end": {
+          "default": "",
+          "description": "Empty means 'Present'.",
+          "pattern": "^(\\d{4}-(0[1-9]|1[0-2]))?$",
+          "title": "End",
+          "type": "string"
+        },
+        "location": {
+          "default": "",
+          "maxLength": 120,
+          "title": "Location",
+          "type": "string"
+        },
+        "client": {
+          "default": "",
+          "maxLength": 120,
+          "title": "Client",
+          "type": "string"
+        },
+        "project": {
+          "default": "",
+          "maxLength": 120,
+          "title": "Project",
+          "type": "string"
+        },
+        "bullets": {
+          "items": {
+            "maxLength": 300,
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Bullets",
+          "type": "array"
+        },
+        "tags": {
+          "items": {
+            "maxLength": 40,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 30,
+          "title": "Tags",
+          "type": "array"
+        },
+        "visible": {
+          "default": true,
+          "title": "Visible",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "company",
+        "role",
+        "start",
+        "end",
+        "location",
+        "client",
+        "project",
+        "bullets",
+        "tags",
+        "visible"
+      ],
+      "title": "Experience",
+      "type": "object"
+    },
+    "Profile": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "headline": {
+          "description": "One-line value proposition shown in the hero.",
+          "maxLength": 300,
+          "title": "Headline",
+          "type": "string"
+        },
+        "about": {
+          "default": "",
+          "maxLength": 4000,
+          "title": "About",
+          "type": "string"
+        },
+        "highlights": {
+          "items": {
+            "maxLength": 300,
+            "type": "string"
+          },
+          "maxItems": 12,
+          "title": "Highlights",
+          "type": "array"
+        },
+        "location": {
+          "default": "",
+          "maxLength": 120,
+          "title": "Location",
+          "type": "string"
+        },
+        "availability": {
+          "default": "",
+          "maxLength": 120,
+          "title": "Availability",
+          "type": "string"
+        },
+        "email": {
+          "maxLength": 200,
+          "pattern": "^[^@\\s]+@[^@\\s]+\\.\\w+$",
+          "title": "Email",
+          "type": "string"
+        },
+        "phone": {
+          "default": "",
+          "pattern": "^[+0-9 ()-]{0,25}$",
+          "title": "Phone",
+          "type": "string"
+        },
+        "showPhone": {
+          "default": false,
+          "title": "Showphone",
+          "type": "boolean"
+        },
+        "photo": {
+          "default": "",
+          "maxLength": 200,
+          "pattern": "^(assets/[A-Za-z0-9][A-Za-z0-9._-]*)?$",
+          "title": "Photo",
+          "type": "string"
+        },
+        "photoAlt": {
+          "default": "",
+          "maxLength": 120,
+          "title": "Photoalt",
+          "type": "string"
+        },
+        "socials": {
+          "$ref": "#/$defs/SocialLinks"
+        },
+        "resume": {
+          "$ref": "#/$defs/Resume"
+        },
+        "stats": {
+          "items": {
+            "$ref": "#/$defs/Stat"
+          },
+          "maxItems": 6,
+          "title": "Stats",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "title",
+        "headline",
+        "about",
+        "highlights",
+        "location",
+        "availability",
+        "email",
+        "phone",
+        "showPhone",
+        "photo",
+        "photoAlt",
+        "socials",
+        "resume",
+        "stats"
+      ],
+      "title": "Profile",
+      "type": "object"
+    },
+    "Project": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "maxLength": 4000,
+          "title": "Description",
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "maxLength": 40,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 20,
+          "title": "Tags",
+          "type": "array"
+        },
+        "links": {
+          "items": {
+            "$ref": "#/$defs/ProjectLink"
+          },
+          "maxItems": 6,
+          "title": "Links",
+          "type": "array"
+        },
+        "image": {
+          "default": "",
+          "maxLength": 200,
+          "pattern": "^(assets/[A-Za-z0-9][A-Za-z0-9._-]*)?$",
+          "title": "Image",
+          "type": "string"
+        },
+        "imageAlt": {
+          "default": "",
+          "maxLength": 120,
+          "title": "Imagealt",
+          "type": "string"
+        },
+        "visible": {
+          "default": true,
+          "title": "Visible",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "description",
+        "tags",
+        "links",
+        "image",
+        "imageAlt",
+        "visible"
+      ],
+      "title": "Project",
+      "type": "object"
+    },
+    "ProjectLink": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "url": {
+          "maxLength": 500,
+          "pattern": "^https?://\\S+$",
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "url"
+      ],
+      "title": "ProjectLink",
+      "type": "object"
+    },
+    "Resume": {
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "default": "url",
+          "enum": [
+            "url",
+            "file"
+          ],
+          "title": "Mode",
+          "type": "string"
+        },
+        "url": {
+          "default": "",
+          "maxLength": 500,
+          "pattern": "^(https?://\\S+)?$",
+          "title": "Url",
+          "type": "string"
+        },
+        "file": {
+          "default": "",
+          "maxLength": 200,
+          "pattern": "^(assets/[A-Za-z0-9][A-Za-z0-9._-]*)?$",
+          "title": "File",
+          "type": "string"
+        }
+      },
+      "required": [
+        "mode",
+        "url",
+        "file"
+      ],
+      "title": "Resume",
+      "type": "object"
+    },
+    "SectionMeta": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "enum": [
+            "hero",
+            "about",
+            "skills",
+            "experience",
+            "projects",
+            "education",
+            "certifications",
+            "testimonials",
+            "contact"
+          ],
+          "title": "Id",
+          "type": "string"
+        },
+        "navLabel": {
+          "maxLength": 120,
+          "title": "Navlabel",
+          "type": "string"
+        },
+        "title": {
+          "maxLength": 120,
+          "title": "Title",
+          "type": "string"
+        },
+        "visible": {
+          "default": true,
+          "title": "Visible",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "navLabel",
+        "title",
+        "visible"
+      ],
+      "title": "SectionMeta",
+      "type": "object"
+    },
+    "Seo": {
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "maxLength": 70,
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "description": {
+          "maxLength": 170,
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "keywords": {
+          "items": {
+            "maxLength": 40,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 25,
+          "title": "Keywords",
+          "type": "array"
+        },
+        "ogImage": {
+          "default": "",
+          "maxLength": 200,
+          "pattern": "^(assets/[A-Za-z0-9][A-Za-z0-9._-]*)?$",
+          "title": "Ogimage",
+          "type": "string"
+        },
+        "siteUrl": {
+          "default": "",
+          "description": "Overridden by VITE_SITE_URL if set.",
+          "maxLength": 500,
+          "pattern": "^(https?://\\S+)?$",
+          "title": "Siteurl",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "keywords",
+        "ogImage",
+        "siteUrl"
+      ],
+      "title": "Seo",
+      "type": "object"
+    },
+    "Skill": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 40,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "level": {
+          "anyOf": [
+            {
+              "enum": [
+                "core",
+                "proficient",
+                "familiar"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Level"
+        }
+      },
+      "required": [
+        "name",
+        "level"
+      ],
+      "title": "Skill",
+      "type": "object"
+    },
+    "SkillGroup": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "skills": {
+          "items": {
+            "$ref": "#/$defs/Skill"
+          },
+          "maxItems": 40,
+          "title": "Skills",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "skills"
+      ],
+      "title": "SkillGroup",
+      "type": "object"
+    },
+    "SocialLinks": {
+      "additionalProperties": false,
+      "properties": {
+        "linkedin": {
+          "default": "",
+          "maxLength": 500,
+          "pattern": "^(https?://\\S+)?$",
+          "title": "Linkedin",
+          "type": "string"
+        },
+        "github": {
+          "default": "",
+          "maxLength": 500,
+          "pattern": "^(https?://\\S+)?$",
+          "title": "Github",
+          "type": "string"
+        },
+        "naukri": {
+          "default": "",
+          "maxLength": 500,
+          "pattern": "^(https?://\\S+)?$",
+          "title": "Naukri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "linkedin",
+        "github",
+        "naukri"
+      ],
+      "title": "SocialLinks",
+      "type": "object"
+    },
+    "Stat": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "value": {
+          "maxLength": 24,
+          "minLength": 1,
+          "title": "Value",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 120,
+          "title": "Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "value",
+        "label"
+      ],
+      "title": "Stat",
+      "type": "object"
+    },
+    "Testimonial": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-z0-9][a-z0-9-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "quote": {
+          "maxLength": 1200,
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        },
+        "author": {
+          "maxLength": 120,
+          "minLength": 1,
+          "title": "Author",
+          "type": "string"
+        },
+        "role": {
+          "default": "",
+          "maxLength": 120,
+          "title": "Role",
+          "type": "string"
+        },
+        "url": {
+          "default": "",
+          "maxLength": 500,
+          "pattern": "^(https?://\\S+)?$",
+          "title": "Url",
+          "type": "string"
+        },
+        "visible": {
+          "default": true,
+          "title": "Visible",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "quote",
+        "author",
+        "role",
+        "url",
+        "visible"
+      ],
+      "title": "Testimonial",
+      "type": "object"
+    },
+    "Theme": {
+      "additionalProperties": false,
+      "properties": {
+        "accent": {
+          "description": "Accent colour used on light backgrounds.",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "title": "Accent",
+          "type": "string"
+        },
+        "accentDark": {
+          "description": "Accent colour used on dark backgrounds.",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "title": "Accentdark",
+          "type": "string"
+        },
+        "defaultMode": {
+          "default": "system",
+          "enum": [
+            "system",
+            "light",
+            "dark"
+          ],
+          "title": "Defaultmode",
+          "type": "string"
+        },
+        "fontPair": {
+          "default": "inter-jetbrains",
+          "enum": [
+            "inter-jetbrains",
+            "grotesk-plex",
+            "serif-mono"
+          ],
+          "title": "Fontpair",
+          "type": "string"
+        }
+      },
+      "required": [
+        "accent",
+        "accentDark",
+        "defaultMode",
+        "fontPair"
+      ],
+      "title": "Theme",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Everything the public site renders.",
+  "properties": {
+    "schemaVersion": {
+      "const": 1,
+      "default": 1,
+      "title": "Schemaversion",
+      "type": "integer"
+    },
+    "profile": {
+      "$ref": "#/$defs/Profile"
+    },
+    "sections": {
+      "items": {
+        "$ref": "#/$defs/SectionMeta"
+      },
+      "title": "Sections",
+      "type": "array"
+    },
+    "skills": {
+      "items": {
+        "$ref": "#/$defs/SkillGroup"
+      },
+      "maxItems": 20,
+      "title": "Skills",
+      "type": "array"
+    },
+    "experience": {
+      "items": {
+        "$ref": "#/$defs/Experience"
+      },
+      "maxItems": 30,
+      "title": "Experience",
+      "type": "array"
+    },
+    "projects": {
+      "items": {
+        "$ref": "#/$defs/Project"
+      },
+      "maxItems": 30,
+      "title": "Projects",
+      "type": "array"
+    },
+    "education": {
+      "items": {
+        "$ref": "#/$defs/Education"
+      },
+      "maxItems": 10,
+      "title": "Education",
+      "type": "array"
+    },
+    "certifications": {
+      "items": {
+        "$ref": "#/$defs/Certification"
+      },
+      "maxItems": 30,
+      "title": "Certifications",
+      "type": "array"
+    },
+    "testimonials": {
+      "items": {
+        "$ref": "#/$defs/Testimonial"
+      },
+      "maxItems": 20,
+      "title": "Testimonials",
+      "type": "array"
+    },
+    "contact": {
+      "$ref": "#/$defs/Contact"
+    },
+    "theme": {
+      "$ref": "#/$defs/Theme"
+    },
+    "seo": {
+      "$ref": "#/$defs/Seo"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "profile",
+    "sections",
+    "skills",
+    "experience",
+    "projects",
+    "education",
+    "certifications",
+    "testimonials",
+    "contact",
+    "theme",
+    "seo"
+  ],
+  "title": "PortfolioContent",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

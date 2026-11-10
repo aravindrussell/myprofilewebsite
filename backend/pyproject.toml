@@ -29,7 +29,6 @@ filterwarnings = ["ignore:Using `httpx` with `starlette.testclient`"]
 [tool.ruff]
 line-length = 100
 target-version = "py312"
-extend-include = ["../scripts/*.py"]
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "B", "UP", "S", "N", "SIM", "RUF", "PTH"]
