@@ -32,8 +32,8 @@
     "stats": [
       { "id": "years", "value": "12+", "label": "years in quality engineering" },
       { "id": "orgs", "value": "5", "label": "organisations" },
-      { "id": "ai", "value": "Playwright + MCP & Claude CODE & Git Hub Copilot", "label": "AI-assisted testing" },
-      { "id": "testauto", "value": "Selenium + Java + Cucumber", "label": "Test Automation Framework" }
+      { "id": "ai", "value": "Playwright + MCP", "label": "AI-assisted testing with Claude Code & GitHub Copilot" },
+      { "id": "testauto", "value": "Selenium + Java", "label": "Test automation framework with Cucumber" }
     ]
   },
   "sections": [
