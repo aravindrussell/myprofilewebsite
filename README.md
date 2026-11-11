@@ -164,7 +164,7 @@ The Playwright suite uses the **Page Object Model**:
 4. Each push to `main` redeploys. If `profile.json` is invalid, the build fails and the
    current site stays live.
 
-To reuse your existing `aravindrusselportfolio.vercel.app`, connect this repo to that Vercel
+The live site is `aravindrussellv.vercel.app` (Vercel project name `aravindrussellv`). To reuse it, connect this repo to that Vercel
 project instead of creating a new one.
 
 ## Environment variables
