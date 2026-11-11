@@ -32,7 +32,8 @@
     "stats": [
       { "id": "years", "value": "12+", "label": "years in quality engineering" },
       { "id": "orgs", "value": "5", "label": "organisations" },
-      { "id": "ai", "value": "Playwright + MCP", "label": "AI-assisted testing" }
+      { "id": "ai", "value": "Playwright + MCP & Claude CODE & Git Hub Copilot", "label": "AI-assisted testing" },
+      { "id": "testauto", "value": "Selenium + Java + Cucumber", "label": "Test Automation Framework" }
     ]
   },
   "sections": [
@@ -337,12 +338,12 @@
     {
       "id": "data-compare-tool",
       "title": "Data Compare Tool",
-      "description": "",
-      "tags": [],
+      "description": "Data Compare tool that validates data across Excel, CSV and database sources and generates a detailed comparison report, automating data verification and reducing manual effort.",
+      "tags": ["Python", "React", "Pandas", "My SQL"],
       "links": [],
       "image": "",
       "imageAlt": "",
-      "visible": false
+      "visible": true
     }
   ],
   "education": [
